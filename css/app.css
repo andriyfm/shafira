@@ -1,0 +1,1267 @@
+/*
+  [Master Stylesheet]
+  Project:	Shafira Wedding HTML Template
+  Version:	1.2.1
+  Last change:	12/09/17 [New Homepage Video Banner]
+  Assigned to:	themeforest.net
+  Author:	Javatheme/Actionart */
+/* ===================================================== */
+/* ===================================================== */
+/* ===================================================== */
+/* CSS TABLE CONTENTS:
+      1. BASE STYLE
+      2. DEFAULT STYLE
+      3. MODULES
+        3.1 NAVBAR MODULE
+        3.2 SECTION MODULE
+        3.3 BANNER MODULE
+        3.4 COUNTDOWN MODULE
+        3.5 BUTTON MODULE
+        3.6 PROFILE MODULE
+        3.7 EVENTS MODULE
+        3.8 GIFT MODULE
+        3.9 SOCIAL MEDIA MODULE
+        3.10 OVERLAY MODULE
+        3.11 OWL MODULE
+        3.12 CAROUSEL MODULE
+      4. SECTIONS
+        4.1 WEDDING DETAIL SECTION
+        4.2 CALL TO ACTION SECTION
+        4.3 WEDDING PROFILE SECTION
+        4.4 WEDDING FAMILY SECTION
+        4.5 WEDDING EVENTS SECTION
+        4.6 GIFT REGISTRY SECTION
+        4.7 WEDING RSPV SECTION
+        4.8 VIDEO BANNER SECTION
+        4.9 ENDING SECTION
+        4.10 RESPONSIVE
+          4.10.1 SMALL DEVICE
+          4.10.2 MEDIUM DEVICE
+          4.10.3 LARGE DEVICE */
+/* ===================================================== */
+/* ===================================================== */
+/* ===================================================== */
+/* BASE STYLE */
+/* ===================================================== */
+button, [type='button'], [type='reset'], [type='submit'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #1565c0;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 150ms ease;
+  -o-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+button:hover, [type='button']:hover, [type='reset']:hover, [type='submit']:hover {
+  background-color: #11519a;
+  color: #fff;
+}
+
+button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus {
+  outline: 3px solid rgba(21, 101, 192, 0.6);
+  outline-offset: 2px;
+}
+
+button:disabled, [type='button']:disabled, [type='reset']:disabled, [type='submit']:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:disabled:hover, [type='button']:disabled:hover, [type='reset']:disabled:hover, [type='submit']:disabled:hover {
+  background-color: #1565c0;
+}
+
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375em;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  font-family: "Catamaran", sans-serif;
+  font-size: 16px;
+}
+
+[type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  -webkit-transition: border-color 150ms ease;
+  -o-transition: border-color 150ms ease;
+  transition: border-color 150ms ease;
+  width: 100%;
+}
+
+[type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover {
+  border-color: #b1b1b1;
+}
+
+[type='color']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='email']:focus, [type='month']:focus, [type='number']:focus, [type='password']:focus, [type='search']:focus, [type='tel']:focus, [type='text']:focus, [type='time']:focus, [type='url']:focus, [type='week']:focus, input:not([type]):focus, textarea:focus {
+  border-color: #1565c0;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(21, 101, 192, 0.7);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(21, 101, 192, 0.7);
+  outline: none;
+}
+
+[type='color']:disabled, [type='date']:disabled, [type='datetime']:disabled, [type='datetime-local']:disabled, [type='email']:disabled, [type='month']:disabled, [type='number']:disabled, [type='password']:disabled, [type='search']:disabled, [type='tel']:disabled, [type='text']:disabled, [type='time']:disabled, [type='url']:disabled, [type='week']:disabled, input:not([type]):disabled, textarea:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+
+[type='color']:disabled:hover, [type='date']:disabled:hover, [type='datetime']:disabled:hover, [type='datetime-local']:disabled:hover, [type='email']:disabled:hover, [type='month']:disabled:hover, [type='number']:disabled:hover, [type='password']:disabled:hover, [type='search']:disabled:hover, [type='tel']:disabled:hover, [type='text']:disabled:hover, [type='time']:disabled:hover, [type='url']:disabled:hover, [type='week']:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover {
+  border: 1px solid #ddd;
+}
+
+[type='color']::-webkit-input-placeholder, [type='date']::-webkit-input-placeholder, [type='datetime']::-webkit-input-placeholder, [type='datetime-local']::-webkit-input-placeholder, [type='email']::-webkit-input-placeholder, [type='month']::-webkit-input-placeholder, [type='number']::-webkit-input-placeholder, [type='password']::-webkit-input-placeholder, [type='search']::-webkit-input-placeholder, [type='tel']::-webkit-input-placeholder, [type='text']::-webkit-input-placeholder, [type='time']::-webkit-input-placeholder, [type='url']::-webkit-input-placeholder, [type='week']::-webkit-input-placeholder, input:not([type])::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #858585;
+}
+
+[type='color']:-ms-input-placeholder, [type='date']:-ms-input-placeholder, [type='datetime']:-ms-input-placeholder, [type='datetime-local']:-ms-input-placeholder, [type='email']:-ms-input-placeholder, [type='month']:-ms-input-placeholder, [type='number']:-ms-input-placeholder, [type='password']:-ms-input-placeholder, [type='search']:-ms-input-placeholder, [type='tel']:-ms-input-placeholder, [type='text']:-ms-input-placeholder, [type='time']:-ms-input-placeholder, [type='url']:-ms-input-placeholder, [type='week']:-ms-input-placeholder, input:not([type]):-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #858585;
+}
+
+[type='color']::placeholder, [type='date']::placeholder, [type='datetime']::placeholder, [type='datetime-local']::placeholder, [type='email']::placeholder, [type='month']::placeholder, [type='number']::placeholder, [type='password']::placeholder, [type='search']::placeholder, [type='tel']::placeholder, [type='text']::placeholder, [type='time']::placeholder, [type='url']::placeholder, [type='week']::placeholder, input:not([type])::placeholder, textarea::placeholder {
+  color: #858585;
+}
+
+textarea {
+  resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+select {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+[type="checkbox"]:focus,
+[type="radio"]:focus,
+[type="file"]:focus,
+select:focus {
+  outline: 3px solid rgba(21, 101, 192, 0.6);
+  outline-offset: 2px;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  table-layout: fixed;
+  text-align: left;
+  width: 100%;
+}
+
+thead {
+  line-height: 1.2;
+  vertical-align: bottom;
+}
+
+tbody {
+  vertical-align: top;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: 600;
+}
+
+th,
+td {
+  padding: 0.75em 0.75em 0.75em 0;
+}
+
+html {
+  color: #333;
+  font-family: "Catamaran", sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sacramento", cursive;
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+p {
+  margin: 0 0 0.75em;
+}
+
+a {
+  color: #1565c0;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
+  -webkit-transition: color 150ms ease;
+  -o-transition: color 150ms ease;
+  transition: color 150ms ease;
+}
+
+a:hover {
+  color: #104c90;
+}
+
+a:focus {
+  outline: 3px solid rgba(21, 101, 192, 0.6);
+  outline-offset: 2px;
+}
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0;
+}
+
+/* ===================================================== */
+/* DEFAULT */
+/* ===================================================== */
+body {
+  font-family: "Catamaran", sans-serif;
+  background: #f4f4f4;
+}
+
+section {
+  padding: 100px 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #212020;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.75rem;
+}
+
+h6 {
+  font-size: 1.50rem;
+}
+
+p {
+  font-family: "Catamaran", sans-serif;
+  color: #878686;
+  margin: 0;
+}
+
+a {
+  color: #f06eaa;
+}
+
+a:hover, a:focus {
+  background: transparent;
+  color: #facae0;
+  text-decoration: none;
+  outline: 0;
+}
+
+[type='text'],
+[type='email'],
+textarea {
+  font-family: "Catamaran", sans-serif;
+  color: #212020;
+  background: #edecec;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #f59cc5;
+  border-radius: 6px;
+}
+
+[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+  border-color: #f06eaa;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 160px;
+}
+
+button,
+[type='button'],
+[type='button']:focus,
+[type='button']:hover {
+  background-color: transparent;
+  outline: 0;
+}
+
+/* ===================================================== */
+/* 3.1 NAVBAR MODULE */
+/* ===================================================== */
+#navbar {
+  z-index: 500;
+}
+
+.nav {
+  z-index: 500;
+}
+
+.nav .open a {
+  background: transparent;
+}
+
+.nav .open a:focus {
+  background: transparent;
+}
+
+.navbar {
+  margin-bottom: 0;
+  -webkit-transition: all 500ms ease-in-out 100ms;
+  -o-transition: all 500ms ease-in-out 100ms;
+  transition: all 500ms ease-in-out 100ms;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  color: white;
+}
+
+.navbar-nav li a {
+  color: #e6e6e6;
+}
+
+.navbar-nav li a:hover, .navbar-nav li a:focus {
+  background: transparent;
+  color: #f06eaa;
+}
+
+.dropdown-menu {
+  background: #f06eaa;
+  border-radius: 0;
+  border: 0;
+}
+
+.dropdown-menu li a {
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  color: #facae0;
+}
+
+.caret {
+  margin-left: 10px;
+}
+
+.navbar-toggle {
+  border: 2px solid #f06eaa;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.icon-bar {
+  background: #f06eaa;
+}
+
+/* ===================================================== */
+/* 3.2 SECTION MODULE */
+/* ===================================================== */
+.section-title,
+.section-desc {
+  text-align: center;
+}
+
+.section-desc {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===================================================== */
+/* 3.3 BANNER MODULE */
+/* ===================================================== */
+.banner {
+  padding: 0;
+  background-color: #eee;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.banner-content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 271px 0;
+}
+
+.banner-date-time,
+.banner-desc {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: lightgray;
+}
+
+.banner-detail {
+  min-width: 50%;
+  max-height: 50%;
+}
+
+.banner-title {
+  font-size: 5em;
+  color: white;
+}
+
+.banner-date-time {
+  font-size: 1.5em;
+}
+
+.banner-desc {
+  margin-bottom: 0;
+  max-width: 50%;
+}
+
+/* ===================================================== */
+/* 3.4 COUNTDOWN MODULE */
+/* ===================================================== */
+.countdown {
+  text-align: center;
+}
+
+.countdown li {
+  display: inline-block;
+  padding: 20px;
+  margin: 0 15px;
+  min-width: 120px;
+  min-height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  font-size: 4em;
+  color: #6d6d6d;
+  border: 2px solid lightgray;
+  border-radius: 6px;
+}
+
+/* ===================================================== */
+/* 3.5 BUTTON MODULE */
+/* ===================================================== */
+.button {
+  display: inline-block;
+  background: #f06eaa;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 13px 17px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.button:hover {
+  background: #eb408f;
+  color: white;
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* ===================================================== */
+/* 3.6 PROFILE MODULE */
+/* ===================================================== */
+.profile-image {
+  background: #f06eaa;
+  min-width: 100%;
+  min-height: 260px;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.profile-image:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.profile-detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+.profile-header,
+.profile-photo {
+  width: 50%;
+}
+
+.profile-photo {
+  overflow: hidden;
+}
+
+/* ===================================================== */
+/* 3.7 EVENTS MODULE */
+/* ===================================================== */
+.event {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.event-detail {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  width: 20%;
+  text-align: right;
+  margin-right: 60px;
+}
+
+.event-photo {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  width: 80%;
+  min-height: 500px;
+  overflow: hidden;
+  background: #f06eaa;
+}
+
+.event-date-time {
+  font-size: 17.5px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.event-phone {
+  margin-bottom: 15px;
+}
+
+/* ===================================================== */
+/* 3.8 GIFT MODULE */
+/* ===================================================== */
+.gift {
+  min-height: 120px;
+  min-width: 100%;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.gift:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* ===================================================== */
+/* 3.9 SOCIAL MEDIA MODULE */
+/* ===================================================== */
+.social-media {
+  text-align: center;
+  color: #bab9b9;
+}
+
+.social-media i {
+  margin: 0 10px;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.social-media i:hover {
+  color: #f06eaa;
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* ===================================================== */
+/* 3.10 OVERLAY MODULE */
+/* ===================================================== */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================================== */
+/* 3.11 OWL MODULE */
+/* ===================================================== */
+.owl-dots {
+  position: relative;
+  margin-top: 0 !important;
+}
+
+.owl-dots {
+  position: relative;
+  bottom: 50px;
+}
+
+.owl-dot.active span {
+  background: #f06eaa !important;
+}
+
+/* ===================================================== */
+/* 3.12 CAROUSEL MODULE */
+/* ===================================================== */
+.carousel-item {
+  background: #eee;
+  height: 100vh;
+}
+
+.carousel-header {
+  position: absolute;
+  margin: 15% 14%;
+}
+
+.carousel-image {
+  overflow: hidden;
+  height: 100%;
+  width: auto;
+}
+
+/* ===================================================== */
+/* 4.1 WEDDING DETAIL SECTION */
+/* ===================================================== */
+#wedding-detail {
+  padding: 100px 0;
+}
+
+#wedding-detail main {
+  text-align: center;
+}
+
+#wedding-detail .countdown {
+  margin: 60px;
+}
+
+/* ===================================================== */
+/* 4.2 CALL TO ACTION ACTION */
+/* ===================================================== */
+#call-to-action {
+  position: relative;
+  padding: 100px 0;
+  background-color: #e11774;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#call-to-action p {
+  font-size: 20px;
+  color: white;
+}
+
+/* ===================================================== */
+/* 4.3 WEDDING PROFILE SECTION */
+/* ===================================================== */
+#wedding-profile {
+  text-align: center;
+}
+
+#wedding-profile p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#wedding-profile main {
+  margin-top: 60px;
+}
+
+#wedding-profile .profile-detail p {
+  margin-bottom: 15px;
+}
+
+#wedding-profile .profile-photo {
+  height: 600px;
+  background: #f06eaa;
+}
+
+#wedding-profile #groom {
+  margin-top: 100px;
+}
+
+#wedding-profile #groom .profile-header {
+  padding-right: 60px;
+}
+
+#wedding-profile #groom .profile-photo {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+#wedding-profile #bride {
+  margin-top: 0;
+}
+
+#wedding-profile #bride .profile-header {
+  padding-left: 60px;
+}
+
+#wedding-profile #bride .profile-photo {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+/* ===================================================== */
+/* 4.4 WEDDING FAMILY SECTION */
+/* ===================================================== */
+#wedding-family main {
+  margin-top: 60px;
+}
+
+#wedding-family .profile-image {
+  height: 260px;
+  margin-bottom: 30px;
+}
+
+#wedding-family .profile-image img {
+  height: 100%;
+}
+
+/* ===================================================== */
+/* 4.5 WEDDING EVENTS SECTION */
+/* ===================================================== */
+#wedding-events {
+  padding: 70px 0 100px;
+}
+
+#wedding-events .event.ceremony {
+  margin: 100px 0;
+}
+
+#wedding-events .event.ceremony .event-detail {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  text-align: left;
+  margin-right: 0;
+  margin-left: 60px;
+}
+
+#wedding-events .event.ceremony .event-photo {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+/* ===================================================== */
+/* 4.6 GIFT REGISTRY SECTION */
+/* ===================================================== */
+#gift-registry {
+  position: relative;
+  padding: 100px 0;
+  background-color: #e11774;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===================================================== */
+/* 4.7 RESERVATION SECTION */
+/* ===================================================== */
+#wedding-rspv {
+  text-align: center;
+  padding: 100px 0;
+}
+
+#wedding-rspv main {
+  margin-top: 60px;
+}
+
+/* ===================================================== */
+/* 4.8 VIDEO BANNER SECTION (NEW: V-1.2.1) */
+/* ===================================================== */
+#video-banner {
+  background: #f06eaa;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 400;
+}
+
+#video-banner .video-banner {
+  z-index: 401;
+}
+
+#video-banner .video-overlay {
+  z-index: 402;
+}
+
+#video-banner .banner-header {
+  z-index: 403;
+}
+
+#video-banner .video-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+header.banner-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+header.banner-header h1.title, header.banner-header p.date-time, header.banner-header p.desc {
+  color: #f4f4f4;
+}
+
+header.banner-header p.date-time {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 auto 30px;
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid rgba(244, 244, 244, 0.3);
+  background: rgba(228, 105, 162, 0.5);
+}
+
+header.banner-header p.desc {
+  font-size: 16px;
+}
+
+video.banner-video {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* ===================================================== */
+/* 4.9 ENDING SECTION */
+/* ===================================================== */
+#ending {
+  position: relative;
+  padding: 100px 0;
+  background-color: #e11774;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#ending .section-title,
+#ending .section-desc {
+  color: white;
+}
+
+#ending header,
+#ending main {
+  position: relative;
+}
+
+#ending main {
+  margin-top: 60px;
+}
+
+#ending a {
+  color: #bab9b9;
+}
+
+/* ===================================================== */
+/* 4.10 RESPONSIVE */
+/* ===================================================== */
+/* ===================================================== */
+/* SMALL DEVICE */
+/* ===================================================== */
+@media (max-width: 767px) and (min-width: 320px) {
+  /* NAVBAR */
+  .navbar {
+    background: black;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-brand {
+    color: white;
+  }
+  /* BANNER */
+  .banner-content {
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+  }
+  .banner-desc {
+    max-width: none;
+  }
+  /* CAROUSEL BANNER */
+  #carousel-banner .carousel-item {
+    height: auto;
+  }
+  #carousel-banner .carousel-header {
+    text-align: center;
+    margin: 10%;
+  }
+  #carousel-banner .carousel-header .banner-date-time,
+  #carousel-banner .carousel-header .banner-desc {
+    display: none;
+  }
+  #carousel-banner .carousel-header .banner-title {
+    font-size: 3em;
+  }
+  /* WEDDING DETAIL */
+  #wedding-detail .countdown {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #wedding-detail .countdown li {
+    font-size: 2.3em;
+    min-width: 60px;
+    max-width: 60px;
+    min-height: 60px;
+    max-height: 60px;
+    padding: 5px;
+    margin: 0 5px;
+  }
+  #wedding-detail .countdown li:first-child {
+    margin-left: 0;
+  }
+  #wedding-detail .countdown li:last-child {
+    margin-right: 0;
+  }
+  /* CALL TO ACTION */
+  #call-to-action .col-sm-12 {
+    text-align: center;
+  }
+  #call-to-action p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  /* WEDDING PROFILE */
+  #wedding-profile .profile-image {
+    margin-bottom: 15px;
+  }
+  #wedding-profile .profile-detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  #wedding-profile .profile-header,
+  #wedding-profile .profile-photo {
+    width: 100%;
+  }
+  #wedding-profile .profile-photo {
+    min-height: 260px;
+    max-height: 300px;
+  }
+  #wedding-profile #groom {
+    margin-bottom: 60px;
+  }
+  #wedding-profile #groom .profile-header {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+  #wedding-profile #groom .profile-photo {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  #wedding-profile #bride .profile-header {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  #wedding-profile #bride .profile-photo {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  /* WEDDING EVENTS */
+  #wedding-events {
+    padding-bottom: 40px;
+  }
+  #wedding-events .event {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  #wedding-events .event-detail,
+  #wedding-events .event-photo {
+    width: 100%;
+    height: auto;
+  }
+  #wedding-events .event-detail {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  #wedding-events .event-photo {
+    min-height: 300px;
+    max-height: 300px;
+    height: auto;
+  }
+  #wedding-events .event-photo img {
+    height: auto;
+    width: auto;
+  }
+  #wedding-events .event.ceremony .event-detail {
+    text-align: center;
+    margin-left: 0;
+  }
+  #wedding-events .event.ceremony .event-photo {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  /* WEDDING FAMILY */
+  #wedding-family .profile-image {
+    margin-bottom: 15px;
+  }
+  /* GIFT REGISTRY */
+  #gift-registry {
+    padding-bottom: 85px;
+  }
+  #gift-registry .gift {
+    margin-bottom: 15px;
+  }
+}
+
+/* ===================================================== */
+/* MEDIUM DEVICE */
+/* ===================================================== */
+@media (min-width: 415px) and (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    background: black;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  /* BANNER */
+  .banner-content {
+    text-align: center;
+  }
+  .banner-desc {
+    max-width: none;
+  }
+  /* CAROUSEL BANNER */
+  #carousel-banner .carousel-item {
+    height: auto;
+  }
+  #carousel-banner .carousel-header {
+    margin: 15%;
+  }
+  /* CALL TO ACTION */
+  #call-to-action p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #call-to-action .col-sm-12.col-md-2 {
+    text-align: center;
+  }
+  /* WEDDING EVENTS */
+  #wedding-events .event-detail {
+    width: 40%;
+  }
+  #wedding-events .event-photo {
+    width: 85%;
+  }
+}
+
+/* ===================================================== */
+/* LARGE DEVICE */
+/* ===================================================== */
+@media (min-width: 768px) and (max-width: 990px) {
+  /* NAVBAR */
+  .navbar {
+    background: black;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  /* CALL TO ACTION */
+  #call-to-action p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #call-to-action .col-sm-12.col-md-2 {
+    text-align: center;
+  }
+  /* WEDDING EVENTS */
+  #wedding-events .event-detail {
+    width: 40%;
+  }
+  #wedding-events .event-photo {
+    width: 85%;
+  }
+}
+
+@media (min-width: 991px) {
+  /* NAVBAR */
+  .navbar-toggle {
+    display: none;
+  }
+}

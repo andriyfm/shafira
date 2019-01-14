@@ -1,0 +1,40 @@
+{
+  "name": "shafira",
+  "version": "2.0.0",
+  "description": "Shafira Wedding HTML Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp default",
+    "dev": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andriyfm/shafira.git"
+  },
+  "keywords": [
+    "wedding",
+    "template",
+    "shafira",
+    "template",
+    "sharira",
+    "wedding",
+    "template",
+    "html",
+    "template"
+  ],
+  "author": "Actionart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andriyfm/shafira/issues"
+  },
+  "homepage": "https://github.com/andriyfm/shafira#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-image": "^4.4.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  }
+}

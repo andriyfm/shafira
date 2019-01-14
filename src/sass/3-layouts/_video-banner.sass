@@ -1,0 +1,48 @@
+#video-banner
+  background: $main-color
+  height: 100vh
+  width: 100%
+  overflow: hidden
+  position: relative
+  z-index: $index-banner
+
+  .video-banner
+    z-index: 401
+  .video-overlay
+    z-index: 402
+  .banner-header
+    z-index: 403
+
+  .video-overlay
+    background: $overlay-color
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+
+header.banner-header
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  h1.title, p.date-time, p.desc
+    color: $body-color
+  p.date-time
+    font-size: 18px
+    font-weight: 700
+    margin: 0 auto $medium-margin
+    display: inline-block
+    padding: 12px 20px
+    border: 1px solid transparentize($body-color, 0.7)
+    background: transparentize(shade($main-color, 5%), 0.5)
+
+  p.desc
+    font-size: 16px
+
+video.banner-video
+  width: auto
+  height: auto
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
